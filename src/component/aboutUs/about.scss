@@ -1,0 +1,141 @@
+$orng: rgb(255, 43, 9);
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 600px) { 
+    .aboutTextDiv {
+        width: 85% !important;
+    }
+    .sl_h2 {
+        font-size: 5vw !important;
+    }
+}
+
+#about {
+    width: 100%;
+    overflow: hidden;
+    .head {
+        width: 100%;
+        height: 40vh;
+        background-image: url("../../img/abotHeder.jpg");
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.55);
+        @include flexCenter();
+        h4 {
+            background-color: #fff;
+            padding: 5px;
+            font-size: 4vw;
+        }
+    }
+    .aboutText {
+        width: 100%;
+        @include flexCenter();
+        flex-wrap: wrap;
+        .aboutTextDiv {
+            width: 45%;
+            margin: 20px;
+            .about_TextDiv {
+                margin-bottom: 20px;
+                width: 100%;
+                height: 80vh;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .Img1 {
+                background-image: url("../../img/about1.jpg");
+            }
+            .Img2 {
+                background-image: url("../../img/about2.jpg");
+            }
+            .aboutTextDivText {
+                width: 100%;
+                height: 20vh;
+                display: contents;
+                h3 {
+                    font-size: 5vh;
+                    width: 100%;
+                    display: block;
+                    margin: 10px;
+                    opacity: .8;
+                }
+                p {
+                    font-size: 2vh;
+                    opacity: .9; 
+                }
+            }
+        }
+    }
+}
+
+#Slader {
+    width: 99vw;
+    height: 100vh;
+    margin: 50px 0 0 0;
+    overflow: hidden;
+    position: relative;
+    .dvig {
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        z-index: 100;
+        @include flexCenter();
+        padding: 0 20px;
+        div {
+            width: 20px;
+            height: 20px;
+            border-top: 2px solid black;
+        }
+    }
+    .left {
+        left: 0;
+        justify-content:  flex-start !important;
+        div {
+            transform: rotate(-45deg);
+            border-left: 2px solid black;
+        }
+    }
+    .right {
+        right: 0;
+        justify-content:  flex-end !important;
+        div {
+            transform: rotate(45deg);
+            border-right: 2px solid black;
+        }
+    }
+    .Sladers_bloks {
+        width: 300vw;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        transition: all 1.2s;
+        .sl_h2 {
+            font-size: 3vw;
+            background-size: cover;
+            background-position: top;
+            opacity: .9;
+        }
+        .Sladers_bloks1 {
+            height: 100%;
+            width: 100vw;
+            background-image: url("../../img/bookandman.jpg");
+            @include flexCenter();
+        }
+        .Sladers_bloks2 {
+            height: 100%;
+            width: 100vw;
+            background-image: url("../../img/bookandgirl.jpg");
+            @include flexCenter();
+        }
+        .Sladers_bloks3 {
+            height: 100%;
+            width: 100vw;
+            background-image: url("../../img/ookandminigirl.jpg");
+            @include flexCenter();
+        }
+    }
+}

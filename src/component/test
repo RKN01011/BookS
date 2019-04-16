@@ -1,0 +1,44 @@
+ <video id="video" width="100%" height="auto" autoPlay="autoplay" loop="loop" preload="auto" muted>
+		<source src={require("../../img/daisy-stock-h264-video.mp4")} type="video/mp4"></source>
+	   </video>
+
+
+
+       window.onscroll = function() {
+  var scrolled = window.pageYOffset;
+  document.getElementById('mainIndex').innerHTML = scrolled + 'px';
+  if ( scrolled === 500){
+    alert("ssss")
+  }
+}
+
+
+
+
+  (dispatch)=>{
+    return{
+      getUser: async ()=>{
+        const action = await getBase();
+        dispatch(action);
+      },
+      getW: async ()=>{
+        const kiril = await getDelet();
+        dispatch(kiril);
+      }
+    }
+    }
+
+
+    window.onscroll = function() {
+  var mainName = document.querySelectorAll(".mainName1");
+  var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrolled > 200) {
+    mainName[0].className = "mainName1 mainNameAnim" 
+  }
+  if (scrolled > 1000) {
+    mainName[1].className = "mainName1 mainNameAnim" 
+  }
+  if (scrolled > 2400) {
+    mainName[2].className = "mainName1 mainNameAnim"  
+  }
+}

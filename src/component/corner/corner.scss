@@ -1,0 +1,169 @@
+$orng: rgb(255, 43, 9);
+a {
+    text-decoration: none;
+}
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) { 
+    .corner { width: 80% !important; }
+    .bigPicher{ width: 100% !important; }
+    .Con_text { 
+        p {
+            font-size: 2vw !important; 
+            margin-top: 10px !important;
+        }
+        ol {
+         font-size: 3vw !important;
+         p {
+            font-size: 2vw !important;  
+         }
+       
+        }
+    }
+}
+
+#corner {
+    width: 100%;
+    height: 100vh;
+    .head {
+        width: 100%;
+        height: 40%;
+        background-image: url("../../img/cornerFon.jpg");
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.55);
+        @include flexCenter();
+        h4 {
+            background-color: #fff;
+            padding: 5px;
+            font-size: 4vw;
+        }
+    }
+ 
+
+
+}
+#ConCoolIndex {
+    @include flexCenter();
+    flex-direction: column;
+    width: 100%;
+    .girl {
+        background-image: url("../../img/girlandbook.jpg");
+        background-position: 40% 50%;
+        background-size: cover;
+    }
+    .kafka {
+        background-image: url("../../img/beath.jpg");
+        background-position: 40% 50%;
+        background-size: cover;
+    }
+    .time {
+        background-image: url("../../img/soLittle.jpg");
+        background-position: 100% 50%;
+        background-size: cover;
+    }
+    .bigPicher {
+        margin-top: 12vh;
+        margin-bottom: 10vh;
+        width: 85%;
+        height: 200vh;
+    }
+}
+
+.corDiv {
+    margin-top: 8vh;
+    @include flexCenter();
+    flex-direction: column;
+    align-items: flex-start !important;
+    p {
+        margin: 15px 0px;
+    }
+    .linkh {
+        font-size: 5vh;
+        color: black;
+    }
+    .linkb {
+        font-size: 2vh;
+        color: black;
+        width: 25vh;
+        height: 10vh;
+        @include flexCenter();
+        border-bottom: 4px solid $orng;
+        border-right: 4px solid $orng;
+        box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.25);
+        &:hover {
+            background: black;
+            color: #fff;
+        }
+    }
+}
+
+.cornerChose {
+    width: 100%;
+    @include flexCenter();
+    flex-wrap: wrap;
+    .conKafka {
+        height: 7vh;
+        .pictha {
+            background-image: url("../../img/beath.jpg");
+            background-size: cover;
+            width: 100%;
+            height: 70vh;
+            box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.25);
+        }
+    }
+    .conTime {
+        height: 4vh;
+        .pictha {
+            background-image: url("../../img/soLittle.jpg");
+            background-size: cover;
+            box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.25);
+            width: 100%;
+            height: 40vh;
+        }
+    }
+    .conCool {
+        height: 8vh;
+        .pictha {
+            background-image: url("../../img/girlandbook.jpg");
+            background-size: cover;
+            box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.25);
+            width: 100%;
+            height: 80vh;
+        }
+    }
+    .corner {
+    display: inline-table;
+    margin: 30px;
+    width: 25%; 
+    }
+}
+
+.Con_text {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 85%;
+    h2 {
+        font-size: 4vw;
+        opacity: .7;
+    }
+    p {
+        font-size: 1vw; 
+        margin-top: 10px;
+    }
+    ol {
+        opacity: .8;
+        margin-top: 10px;
+        padding: 0 0 0 15px;
+     font-size: 2vw;
+     p {
+        font-size: 1vw;  
+     }
+   
+    }
+}

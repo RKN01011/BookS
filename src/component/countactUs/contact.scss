@@ -1,0 +1,105 @@
+$orng: rgb(255, 43, 9);
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#countac {
+    width: 100%;
+    overflow: hidden;
+    .head {
+        width: 100%;
+        height: 40vh;
+        background-image: url("../../img/contact.jpg");
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.55);
+        @include flexCenter();
+        h4 {
+            background-color: #fff;
+            padding: 5px;
+            font-size: 4vw;
+        }
+    }
+}
+.conDiv {
+    @include flexCenter();
+    .coreForm {
+        @include flexCenter();
+        flex-direction: column;
+        h3 {
+            @include flexCenter();
+            width: 80%;
+            height: 40vh;
+            font-size: 7vh;  
+        }
+    }
+}
+#formCon {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 45vh;
+    justify-content: space-evenly;
+    input, textarea  {
+      border: none;
+      background: transparent;
+      height: 2vw;
+      border-bottom: 4px solid $orng;
+      font-size: 1vw;
+      &:hover {
+        background: whitesmoke;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
+      }
+    }
+    div {
+        position: relative;
+        height: 4vw;
+      input[type="button"] {
+      height: 3vw;
+      width: 11vw;
+      border-bottom: 4px solid black;
+      border-right: 4px solid black;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 1vw;
+      cursor: pointer;
+      &:hover {
+        background: black;
+        color: $orng;
+        border-bottom: 4px solid $orng;
+        border-right: 4px solid $orng;
+        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
+      }
+    }
+}
+  }
+
+.textMap {
+    margin-top: 60px;
+    width: 100%;
+    height: 50vh;
+    @include flexCenter();
+    flex-direction: column;
+    h4 {
+        font-size: 3vw;
+        opacity: .8;
+    }
+    p {
+        font-size: 1vw;
+        margin: 50px;
+        opacity: .8;
+    }
+}
+.MAPA {
+    height: 60vh;
+    width: 60%;
+    background-color: aquamarine;
+    margin: 50px;
+}

@@ -1,0 +1,326 @@
+$orng: rgb(255, 43, 9);
+@media screen and (max-width: 800px) {
+   .BOOK {
+    width: 60vw !important;
+   } 
+   #bookmenu {
+    margin: 150px 0px !important;
+    label {
+        font-size: 4vw !important;
+    }
+   }
+   .basketDiv {
+    h4 {
+        font-size: 3vh !important;
+    }
+}
+    .basket {
+        width: 85% !important;
+    }
+    .basketTable {
+        height: 60vh !important;
+    }
+    .basketStep {
+        p{
+            font-size: 2vh !important;
+            span {
+                font-size: 3vh;
+            }
+        }  
+    }
+    .basketRButton {
+        width: 60% !important;
+    }
+    #basketCore .basket {
+        flex-wrap: wrap;
+        top: 22vh;
+        .basketDiv {
+            width: 90% !important;
+        }
+    }
+    .miniBlock {
+        div {
+            p {
+                font-size: 5vw !important;
+            }
+        }
+    }
+}
+input[type="radio"] {
+    display: none;
+}
+input[type="checkbox"] {
+    display: none;
+}
+#n_ALL:checked ~ #bookmenu > #in_ALL {
+    background-color: black;
+    color: $orng; }
+#n_BESTSELLER:checked ~ #bookmenu > #in_BESTSELLER {
+    background-color: black;
+    color: $orng; }
+#n_FANTASY:checked ~ #bookmenu > #in_FANTASY {
+    background-color: black;
+    color: $orng; }
+#n_NOVELS:checked ~ #bookmenu > #in_NOVELS {
+    background-color: black;
+    color: $orng; }
+#n_CLASSICS:checked ~ #bookmenu > #in_CLASSICS {
+    background-color: black;
+    color: $orng; }
+#n_MODERN:checked ~ #bookmenu > #in_MODERN {
+    background-color: black;
+    color: $orng; }
+
+#storeList {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #bookmenu {
+        display: flex;
+        width: 50vw;
+        height: 100px;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        margin: 105px 0px;
+        flex-wrap: wrap;
+        label {
+            margin: 10px 20px;
+            font-size: 1vw;
+            cursor: pointer;
+            background: transparent;
+            padding: 5px;
+            &:hover {
+                background: black;
+                color: $orng;
+            }
+        }
+    }
+    #booklist {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        .BOOK {
+            width: 20vw;
+            height: 65vh;
+            margin: 10px;
+            .bookimg {
+                width: 100%;
+                height: 80%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &:hover {
+                    .addBook {
+                        z-index: 3;
+                        cursor: pointer;
+                    } 
+                }
+                .addBook {
+                    width: 40%;
+                    position: absolute;
+                    z-index: 0;
+                    height: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: black;
+                    color: #fff;
+                    &:hover {
+                        background-color: $orng;
+                    }                
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    z-index: 2;
+                }
+            }
+            .booktext {
+                width: 100%;
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                h3 {
+                    font-size: 3vh;
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}
+
+#basketCore {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: transparent;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.6);
+    overflow: auto;
+    .basket {
+        width: 60%;
+        background-color: whitesmoke;
+        border-radius: 20px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px;
+        .basketDiv {
+            height: 100%;
+            h4 {
+                font-size: 4vh;
+                opacity: .8;
+            }
+        }
+        .basketLeft {
+            width: 35%;
+            margin-right: 3vw;
+             div {
+                margin: 10px 0;
+                font-size: 2vh;
+            }
+            .basketTable {
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+                overflow: auto;
+                height: 33vh;
+                overflow: auto;
+                display: flex;
+                justify-content: flex-start;
+                div {
+                    width: 100%;
+            .miniBlock {
+                width: 100%;
+                opacity: .9;
+                display: flex;
+                align-items: center; 
+                border-bottom: 1px solid rgba(0,0,0,.4);
+                padding-bottom: 5px;
+                img {
+                    width: 10vh;
+                    margin-right: 10px;
+                }
+                div {
+                    height: 100%;
+                     width: 80%;
+                     display: flex;
+                     align-items: center;
+                     justify-content: space-between;
+                     p {
+                         margin: 0 10px;
+                     }
+                }
+            }
+        }
+        }
+        .price {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+        .basketRight {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            div {
+                p, div {
+                    margin: 10px 0;
+                    font-size: 2vh;
+                    font-weight: 300;
+                    opacity: .8;
+                }
+                h4 {
+                    font-size: 3vh;
+                }
+                input[type="email"] {
+                    width: 80%;
+                    border-radius: 5px;
+                    border: 1px solid;
+                    height: 3vh;
+                    opacity: .4;                
+                }
+                .basketStep {
+                    h4 {
+                        border-bottom: 1px solid rgba(0,0,0,.4);
+                    }
+                    p {
+                        font-weight: 200;
+                    }
+                }
+                .basketRButton {
+                    background-color: black;
+                    color: #fff;
+                    width: 30%;
+                    height: 5vh;
+                    border-radius: 5px;
+                    font-size: 13pt;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 12vw;
+                    cursor: pointer;
+                    border: 1px solid transparent;
+                    &:hover {
+                        background-color: #fff;
+                        color: black;
+                        border: 1px solid black;
+                    }
+                }
+                div {
+                    input[type="checkbox"] {
+                        display: inline;
+                        margin-right: 5px;
+                    }
+                    label {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .closeDiv {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            z-index: 110;
+            &::after {
+                content: "";
+                width: 30px;
+                height: 2px;
+                background: black;
+                position: absolute;
+                left: 5px;
+                top: 20px;
+                transform: rotate(45deg);
+            }
+            &::before {
+                content: "";
+                width: 30px;
+                height: 2px;
+                background: black;
+                position: absolute;
+                left: 5px;
+                top: 20px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
