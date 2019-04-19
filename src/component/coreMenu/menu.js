@@ -11,11 +11,11 @@ const Menu = () => {
 </div>
 <div className="coreMenu">
 
-    <Link to="/">HOME</Link>
-    <Link to="/store">SHOP</Link>
-    <Link to="/corner">READERS CORNER</Link>
-    <Link to="/about">ABOUT US</Link>
-    <Link to="/countac">CONTACT US</Link>
+    <Link to="/" onClick={()=>window.scrollTo(0,0)}>HOME</Link>
+    <Link to="/store" onClick={()=>window.scrollTo(0,0)}>SHOP</Link>
+    <Link to="/corner" onClick={()=>window.scrollTo(0,0)}>READERS CORNER</Link>
+    <Link to="/about" onClick={()=>window.scrollTo(0,0)}>ABOUT US</Link>
+    <Link to="/countac" onClick={()=>window.scrollTo(0,0)}>CONTACT US</Link>
 </div>
 
 </section>

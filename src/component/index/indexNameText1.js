@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 
 
-
 class indexNameText1 extends Component {
     constructor(){
         super()
@@ -31,7 +30,7 @@ class indexNameText1 extends Component {
     render() {
 return(
     
-<div className="mainName">
+<div className="mainName an" data-div={1000}>
 <div className="mainName1">
 <h2>RECOMMENDED THIS WEEK:</h2>
 </div>

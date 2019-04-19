@@ -29,16 +29,3 @@
     }
 
 
-    window.onscroll = function() {
-  var mainName = document.querySelectorAll(".mainName1");
-  var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrolled > 200) {
-    mainName[0].className = "mainName1 mainNameAnim" 
-  }
-  if (scrolled > 1000) {
-    mainName[1].className = "mainName1 mainNameAnim" 
-  }
-  if (scrolled > 2400) {
-    mainName[2].className = "mainName1 mainNameAnim"  
-  }
-}

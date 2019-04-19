@@ -8,7 +8,7 @@ const ConCool = () => {
         <div className="pictha" />
         <div className="corDiv"><Link to="/" className="linkh">Why Reading Is Cool?</Link>
         <p>The New Hype in Town!</p>
-        <Link to="/corner/concool" className="linkb">READ MORE</Link></div>
+        <Link to="/corner/concool" className="linkb" onClick={()=>window.scrollTo(0,0)}>READ MORE</Link></div>
         
 
 </div>

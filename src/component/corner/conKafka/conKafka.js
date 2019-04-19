@@ -8,7 +8,7 @@ const ConKafka = () => {
         <div className="pictha"/>
         <div className="corDiv"><Link to="/" className="linkh">Kafka on the Shore</Link>
         <p>The Book Title That Created So Much Buzz!</p>
-        <Link to="/corner/conKafka" className="linkb">READ MORE</Link></div>
+        <Link to="/corner/conKafka" className="linkb" onClick={()=>window.scrollTo(0,0)}>READ MORE</Link></div>
         
 
 </div>

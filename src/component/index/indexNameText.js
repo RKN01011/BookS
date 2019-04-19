@@ -2,7 +2,7 @@ import React from 'react';
 
 const indexNameText = () => {
 return(
-<div>
+<div className="anim">
 <div className="mainName1">
 <h2>BESTSELLERS</h2>
 </div>

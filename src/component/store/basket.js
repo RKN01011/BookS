@@ -9,7 +9,6 @@ constructor(props){
   super(props)
   this.state = {
     value: 1,
-    choose: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ]
   }
 }
   func (){
@@ -23,7 +22,6 @@ constructor(props){
     render() {
     return(
 <div id="basketCore" style={{display: "none"}}>
-{console.log(this.props.basket[0])}
 <div className="basket">
 
 <div className="closeDiv" onClick={visableBasket} />

@@ -27,7 +27,7 @@ class Nav extends Component {
   render(){
   return(
     <nav id="navIndex">
-      <Link to="/" className="logoLink">
+      <Link to="/" onClick={()=>window.scrollTo(0,0)} className="logoLink">
       <img src={require("../../img/logo.png")} alt="logo"></img>
       </Link>
       <div className="menuLink">
