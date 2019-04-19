@@ -11,6 +11,7 @@ import Menu from "../coreMenu/menu"
 import Basket from '../store/basket';
 import {connect} from "react-redux"
 import  {getAll, getAllFantasy, getAllNovels, getAllClassics, getAllModern}  from '../action/store.action';
+import { set_book } from '../action/basket.action';
 
 window.onscroll = function() {
   let an = document.getElementsByClassName("an");
@@ -38,7 +39,7 @@ class IndexApp extends Component {
         <Menu />
         <IndexTop />
         <section id="mainIndex">
-            <IndexNameText />
+            <IndexNameText inStore={this.props.inStore} set_book={this.props.set_book}/>
             <IndexNameText1 />
         </section>
             <IndexNameText2 getF={this.props.getallfant} getC={this.props.getclas} getN={this.props.getallnov} getM={this.props.getallmod}/>
@@ -53,7 +54,8 @@ class IndexApp extends Component {
   export default connect(
     (store)=>{
   return {
-    base: store.store
+    base: store.store,
+    inStore: store.inStore
   }
     },
     (dispatch)=>{
@@ -76,6 +78,10 @@ class IndexApp extends Component {
           },
           getallmod: async ()=>{
             const action = await getAllModern();
+            dispatch(action);
+          },
+          async set_book (name, price, img, quantity){
+            const action = await set_book(name, price, img, quantity);
             dispatch(action);
           },      
         }

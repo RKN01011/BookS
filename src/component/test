@@ -29,3 +29,27 @@
     }
 
 
+
+    <div className="bookBlock">
+    <div className="b2">
+    <div className="addCard">ADD TO CADR</div>
+    </div>
+    <h4>Lolita</h4>
+    <p>$ 9.99</p>
+    </div>
+    <div className="bookBlock">
+    <div className="b3">
+    <div className="addCard">ADD TO CADR</div>
+    </div>
+    <h4>Metamorphosis</h4>
+    <p>$ 9.99</p>
+    </div>
+    <div className="bookBlock">
+    <div className="b4">
+    <div className="addCard">ADD TO CADR</div>
+    </div>
+    <h4>1984</h4>
+    <p>$ 9.99</p>
+    </div>
+
+

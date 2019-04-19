@@ -1,40 +1,31 @@
 import React from 'react';
 
-const indexNameText = () => {
+function indexNameText (props) {
+    function book  () {
+
+        let book = props.inStore;
+        return book.map( el => {
+          return( 
+            
+          <div className="bookBlock" key={el.name}>
+          <div className="b">
+          <img src={el.src} alt=""/>
+          <label className="addCard" htmlFor={el.name} onClick={ () => props.set_book(el.name, el.price, el.src, 1)}>ADD CARD</label>
+          </div>
+          
+          <h4>{el.name}</h4>
+          <p>$ {el.price}</p>
+          
+          </div>)
+        })
+        }
 return(
 <div className="anim">
 <div className="mainName1">
 <h2>BESTSELLERS</h2>
 </div>
 <div className="mainName2"> 
-    <div className="bookBlock">
-    <div className="b1">
-    <div className="addCard">ADD TO CADR</div>
-    </div>
-    <h4>A Clockwork Orange</h4>
-    <p>$ 9.99</p>
-    </div>
-    <div className="bookBlock">
-    <div className="b2">
-    <div className="addCard">ADD TO CADR</div>
-    </div>
-    <h4>Lolita</h4>
-    <p>$ 9.99</p>
-    </div>
-    <div className="bookBlock">
-    <div className="b3">
-    <div className="addCard">ADD TO CADR</div>
-    </div>
-    <h4>Metamorphosis</h4>
-    <p>$ 9.99</p>
-    </div>
-    <div className="bookBlock">
-    <div className="b4">
-    <div className="addCard">ADD TO CADR</div>
-    </div>
-    <h4>1984</h4>
-    <p>$ 9.99</p>
-    </div>
+    {book()}
 </div>
 </div>
 

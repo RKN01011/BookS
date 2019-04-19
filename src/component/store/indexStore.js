@@ -30,8 +30,7 @@ return book.map( el => {
   </div>
   </div>)
 })
-
-  }
+}
     render() {
       return (
         <React.Fragment>
